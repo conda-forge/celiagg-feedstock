@@ -20,12 +20,12 @@ requirements:
     - python
     - toolchain
     - pkg-config  # [not win]
-    - numpy x.x
+    - numpy 1.11.*
     - cython
     - freetype 2.6.*
   run:
     - python
-    - numpy x.x
+    - numpy >=1.11
     - freetype 2.6.*
 
 test:
