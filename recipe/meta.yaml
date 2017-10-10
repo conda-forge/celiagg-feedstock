@@ -14,17 +14,24 @@ build:
   number: 0
   skip: true  # [py34]
   script: python setup.py install
+  features:
+    - vc9   # [win and py27]
+    - vc14  # [win and py>=35]
 
 requirements:
   build:
     - python
     - toolchain
+    - vc 9  # [win and py27]
+    - vc 14  # [win and py>=35]
     - pkg-config  # [not win]
     - numpy 1.11.*
     - cython
     - freetype 2.6.*
   run:
     - python
+    - vc 9  # [win and py27]
+    - vc 14  # [win and py>=35]
     - numpy >=1.11
     - freetype 2.6.*
 
