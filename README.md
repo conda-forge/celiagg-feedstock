@@ -16,14 +16,16 @@ graphics library.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/celiagg-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/celiagg-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/celiagg-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/celiagg-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/celiagg-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/celiagg-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/celiagg-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/celiagg-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/celiagg-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/celiagg-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/celiagg-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/celiagg-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/celiagg/badges/version.svg)](https://anaconda.org/conda-forge/celiagg)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/celiagg/badges/downloads.svg)](https://anaconda.org/conda-forge/celiagg)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-celiagg-green.svg)](https://anaconda.org/conda-forge/celiagg) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/celiagg.svg)](https://anaconda.org/conda-forge/celiagg) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/celiagg.svg)](https://anaconda.org/conda-forge/celiagg) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/celiagg.svg)](https://anaconda.org/conda-forge/celiagg) |
 
 Installing celiagg
 ==================
