@@ -22,7 +22,7 @@ requirements:
     - python
     - pip
     - setuptools
-    - numpy 1.14
+    - numpy
     - cython
     - freetype
   run:
