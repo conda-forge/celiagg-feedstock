@@ -1,4 +1,4 @@
-{% set version = "1.0.3" %}
+{% set version = "1.1.0" %}
 
 package:
   name: celiagg
@@ -7,11 +7,11 @@ package:
 source:
   fn: celiagg-{{ version }}.tar.gz
   url: https://github.com/celiagg/celiagg/archive/{{ version }}.tar.gz
-  sha256: 8efded720a19afd87df2a140a589f9bc426cc9de1a6ab84111ff22d6e0d54e8d
+  sha256: fb54e05daf5651037dd748e664b85e3cc86e51e784f8a108ee40b7d10e0cbec0
 
 build:
-  number: 1002
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv --disable-pip-version-check"
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv --disable-pip-version-check
 
 requirements:
   build:
@@ -38,7 +38,7 @@ about:
   home: https://github.com/celiagg/celiagg
   license: MIT
   license_file: LICENSE
-  summary: 'Anti-Grain Geometry 2.4 for Python with Cython'
+  summary: Anti-Grain Geometry 2.4 for Python with Cython
 
   description: |
     celiagg is a Cython wrapper for the popular Anti-Grain Geometry 2D vector
