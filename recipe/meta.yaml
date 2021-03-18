@@ -28,7 +28,6 @@ requirements:
   run:
     - python
     - {{ pin_compatible('numpy') }}
-    - freetype
 
 test:
   imports:
