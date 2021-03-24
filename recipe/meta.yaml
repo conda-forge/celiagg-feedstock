@@ -1,4 +1,4 @@
-{% set version = "2.1.1" %}
+{% set version = "2.1.2" %}
 
 package:
   name: celiagg
@@ -7,7 +7,7 @@ package:
 source:
   fn: celiagg-{{ version }}.tar.gz
   url: https://github.com/celiagg/celiagg/archive/{{ version }}.tar.gz
-  sha256: e32e1c44765d0b48661cc950b81cc5e58026249cd2a989003809b99a7aede782
+  sha256: 22082fe071d5990e139701dabb5c373a4b9e788a67b7f060881713b4d37f3aee
 
 build:
   number: 0
