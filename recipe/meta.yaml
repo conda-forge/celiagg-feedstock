@@ -26,6 +26,8 @@ requirements:
     - numpy
     - cython
     - freetype  # [not win]
+    # Needs zlib development files to find freetype with pkg-config
+    - zlib      # [not win]
   run:
     - python
     - {{ pin_compatible('numpy') }}
