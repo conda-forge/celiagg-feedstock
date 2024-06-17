@@ -1,4 +1,4 @@
-{% set version = "2.1.4" %}
+{% set version = "2.1.6" %}
 
 package:
   name: celiagg
@@ -7,10 +7,10 @@ package:
 source:
   fn: celiagg-{{ version }}.tar.gz
   url: https://github.com/celiagg/celiagg/archive/{{ version }}.tar.gz
-  sha256: 4d8ca9144e84db644f72cec2c166615a1acc54385f9888c40527d1c53c42cc75
+  sha256: 4e9198c756642e8a270f7bf08bef65dfe8175afe79ea8fc8e6deb4e13cc502df
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv --disable-pip-version-check
 
 requirements:
