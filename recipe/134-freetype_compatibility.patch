@@ -1,0 +1,52 @@
+From d361a321ca46e5ded605550ccf7ec2d6477fcce2 Mon Sep 17 00:00:00 2001
+From: John Wiggins <jwiggins@enthought.com>
+Date: Mon, 1 Sep 2025 14:59:37 +0200
+Subject: [PATCH] FIX: Build error with new FreeType (2.13.3+)
+
+---
+ agg-svn/agg-2.4/font_freetype/agg_font_freetype.cpp  | 10 +++++++---
+ agg-svn/agg-2.4/font_freetype/agg_font_freetype2.cpp | 10 +++++++---
+ 2 files changed, 14 insertions(+), 6 deletions(-)
+
+diff --git a/agg-svn/agg-2.4/font_freetype/agg_font_freetype.cpp b/agg-svn/agg-2.4/font_freetype/agg_font_freetype.cpp
+index e725784..878a65f 100644
+--- a/agg-svn/agg-2.4/font_freetype/agg_font_freetype.cpp
++++ b/agg-svn/agg-2.4/font_freetype/agg_font_freetype.cpp
+@@ -155,9 +155,13 @@ namespace agg
+         FT_Vector   v_start;
+         double x1, y1, x2, y2, x3, y3;
+ 
+-        FT_Vector*  point;
+-        FT_Vector*  limit;
+-        char*       tags;
++        FT_Vector*      point;
++        FT_Vector*      limit;
++#if (FREETYPE_MAJOR == 2 && FREETYPE_MINOR == 13 && FREETYPE_PATCH >= 3) || (FREETYPE_MAJOR == 2 && FREETYPE_MINOR > 13) || FREETYPE_MAJOR > 2
++        unsigned char*  tags;
++#else
++        char*           tags;
++#endif
+ 
+         int   n;         // index of contour in outline
+         int   first;     // index of first point in contour
+diff --git a/agg-svn/agg-2.4/font_freetype/agg_font_freetype2.cpp b/agg-svn/agg-2.4/font_freetype/agg_font_freetype2.cpp
+index 7d44230..2505fcb 100644
+--- a/agg-svn/agg-2.4/font_freetype/agg_font_freetype2.cpp
++++ b/agg-svn/agg-2.4/font_freetype/agg_font_freetype2.cpp
+@@ -155,9 +155,13 @@ namespace fman {
+         FT_Vector   v_start;
+         double x1, y1, x2, y2, x3, y3;
+ 
+-        FT_Vector*  point;
+-        FT_Vector*  limit;
+-        char*       tags;
++        FT_Vector*      point;
++        FT_Vector*      limit;
++#if (FREETYPE_MAJOR == 2 && FREETYPE_MINOR == 13 && FREETYPE_PATCH >= 3) || (FREETYPE_MAJOR == 2 && FREETYPE_MINOR > 13) || FREETYPE_MAJOR > 2
++        unsigned char*  tags;
++#else
++        char*           tags;
++#endif
+ 
+         int   n;         // index of contour in outline
+         int   first;     // index of first point in contour
