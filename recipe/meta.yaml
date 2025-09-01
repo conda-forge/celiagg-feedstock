@@ -5,9 +5,11 @@ package:
   version: {{ version }}
 
 source:
-  fn: celiagg-{{ version }}.tar.gz
   url: https://github.com/celiagg/celiagg/archive/{{ version }}.tar.gz
   sha256: 4e9198c756642e8a270f7bf08bef65dfe8175afe79ea8fc8e6deb4e13cc502df
+  patches:
+    # https://github.com/celiagg/celiagg/pull/134
+    - 134-freetype_compatibility.patch
 
 build:
   number: 2
