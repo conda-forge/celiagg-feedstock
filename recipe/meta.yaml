@@ -6,18 +6,18 @@ package:
 
 source:
   url: https://github.com/celiagg/celiagg/archive/{{ version }}.tar.gz
-  sha256: 4e9198c756642e8a270f7bf08bef65dfe8175afe79ea8fc8e6deb4e13cc502df
+  sha256: dd22cd3e40744ddbb2f40d9b79fb409337ab04384142c44e98f143eda83c9eed
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv --disable-pip-version-check
 
 requirements:
   build:
     - pkg-config  # [not win]
-    - {{ compiler('c') }}
-    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
+    - {{ compiler('c') }}
+    - {{ stdlib('c') }}
     - make  # [unix]
   host:
     - python
